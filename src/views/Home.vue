@@ -101,7 +101,7 @@ export default {
       }
 
       axios
-        .post('https://vue-url-shortener-api.herokuapp.com/api', {
+        .post(this.server_url, {
           url: this.url,
           custom_url: this.custom_url,
         })
@@ -111,8 +111,7 @@ export default {
               data: { slug },
             },
           }) => {
-            this.result_url =
-              'https://wisuja.github.io/Vue-URL_Shortener/' + slug;
+            this.result_url = window.location.origin + '/' + slug;
           }
         )
         .catch((error) => (this.error = 'Error occured. Try again.'));
