@@ -112,7 +112,7 @@ export default {
             },
           }) => {
             this.result_url =
-              'https://vue-url-shortener-api.herokuapp.com/' + slug;
+              'https://wisuja.github.io/Vue-URL_Shortener/' + slug;
           }
         )
         .catch((error) => (this.error = 'Error occured. Try again.'));
