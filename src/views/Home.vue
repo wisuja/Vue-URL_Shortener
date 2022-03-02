@@ -111,7 +111,8 @@ export default {
               data: { slug },
             },
           }) => {
-            this.result_url = 'http://localhost:8080/' + slug;
+            this.result_url =
+              'https://vue-url-shortener-api.herokuapp.com/' + slug;
           }
         )
         .catch((error) => (this.error = 'Error occured. Try again.'));
