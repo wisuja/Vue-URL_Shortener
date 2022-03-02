@@ -101,7 +101,7 @@ export default {
       }
 
       axios
-        .post(' https://vue-url-shortener-api.herokuapp.com/api', {
+        .post('https://vue-url-shortener-api.herokuapp.com/api', {
           url: this.url,
           custom_url: this.custom_url,
         })

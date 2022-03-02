@@ -17,7 +17,7 @@ export default {
   },
   mounted() {
     axios
-      .get(' https://vue-url-shortener-api.herokuapp.com/api/' + this.slug)
+      .get('https://vue-url-shortener-api.herokuapp.com/api/' + this.slug)
       .then(({ data: { url } }) => (window.location.href = url))
       .catch((error) => (this.isLoading = false));
   },
