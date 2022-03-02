@@ -17,7 +17,7 @@ export default {
   },
   mounted() {
     axios
-      .get('http://localhost:8080/api/' + this.slug)
+      .get('/api/' + this.slug)
       .then(({ data: { url } }) => (window.location.href = url))
       .catch((error) => (this.isLoading = false));
   },

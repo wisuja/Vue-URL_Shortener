@@ -101,7 +101,7 @@ export default {
       }
 
       axios
-        .post('http://localhost:8080/api', {
+        .post('/api', {
           url: this.url,
           custom_url: this.custom_url,
         })
@@ -111,7 +111,7 @@ export default {
               data: { slug },
             },
           }) => {
-            this.result_url = 'http://localhost:8080/' + slug;
+            this.result_url = '/' + slug;
           }
         )
         .catch((error) => (this.error = 'Error occured. Try again.'));
